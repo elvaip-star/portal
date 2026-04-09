@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTAL</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  background:#f2f2f2;
+}
+
+header{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+nav{
+  text-align:center;
+  background:#444;
+  padding:10px;
+}
+
+nav button{
+  margin:5px;
+  padding:10px 15px;
+  border:none;
+  background:white;
+  cursor:pointer;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+section{
+  display:none;
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+  background:white;
+  margin-top:20px;
+  border-radius:8px;
+}
+
+img{
+  width:100%;
+  border-radius:8px;
+}
+
+h2{
+  border-bottom:2px solid #ccc;
+  padding-bottom:8px;
+}
+</style>
+
+<script>
+function mostrar(id){
+  var secciones = document.querySelectorAll("section");
+  secciones.forEach(s => s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <h1>PORTAL 📰</h1>
+  <p>Noticias del Perú y el Mundo</p>
+</header>
+
+<nav>
+  <button onclick="mostrar('ultimo')">Último</button>
+  <button onclick="mostrar('politica')">Política</button>
+  <button onclick="mostrar('economia')">Economía</button>
+  <button onclick="mostrar('opinion')">Opinión</button>
+  <button onclick="mostrar('turismo')">Turismo</button>
+</nav>
+
+<section id="ultimo">
+  <h2>Último</h2>
+  <img src="https://via.placeholder.com/800x400">
+  <p>Aquí pegas una noticia real reciente...</p>
+</section>
+
+<section id="politica">
+  <h2>Política</h2>
+  <img src="https://via.placeholder.com/800x400">
+  <p>Aquí va una noticia política real...</p>
+</section>
+
+<section id="economia">
+  <h2>Economía</h2>
+  <img src="https://via.placeholder.com/800x400">
+  <p>Aquí va una noticia económica real...</p>
+</section>
+
+<section id="opinion">
+  <h2>Opinión</h2>
+  <p>Aquí escribes un texto de opinión...</p>
+</section>
+
+<section id="turismo">
+  <h2>Turismo</h2>
+  <img src="https://via.placeholder.com/800x400">
+  <p>Aquí puedes poner un lugar turístico bonito del Perú...</p>
+</section>
+
+</body>
+</html>
